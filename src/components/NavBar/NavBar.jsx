@@ -7,11 +7,11 @@ function NavBar(props) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 
 	return (
-		<div className="flex items-center justify-between py-8 px-8 lg:px-40 w-full">
+		<div className="pt-[40px] w-[full]">
 			{/* <Logo image={btcLogo} /> */}
-			<nav className="flex">
+			<nav className="ml-[2.5%] px-2 flex justify-start">
 				<section
-					className="bg-transparent flex justify-between items-center rounded-full p-5 h-[60px] button-plus"
+					className="fixed bg-transparent flex justify-between items-center rounded-full w-[60px] h-[60px] button-plus"
 					onClick={() => setIsNavOpen((prev) => !prev)}
 				>
 					<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
@@ -22,18 +22,18 @@ function NavBar(props) {
 				<section className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
 					<div className="h-full">
 						<header
-							className="flex items-center justify-between py-8 px-8 lg:px-40 mb-8"
+							className="flex items-center justify-between px-2 bg-transparent"
 							onClick={() => setIsNavOpen(false)}
 						>
 							{/* <Logo image={btcLogo} classLogo="text-gray-100" logo="btc" /> */}
-							<div
-								className="flex flex-col justify-center items-center space-y-1 bg-red-600 rounded-full p-5 w-[60px] h-[60px] button-plus-active button-plus"
+							<section
+								className="flex justify-between items-center rounded-full w-[60px] h-[60px] bg-transparent button-plus "
 								onClick={() => setIsNavOpen((prev) => !prev)}
 							>
-								<span className="block h-1 w-4 animate-pulse rotate-90 bg-gray-100"></span>
-								<span className="block h-1 w-8 animate-pulse bg-gray-100"></span>
-								<span className="block h-1 w-4 animate-pulse rotate-90 bg-gray-100"></span>
-							</div>
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#8844d4]"></span>
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
+							</section>
 						</header>
 						<NavOpen>{props.children}</NavOpen>
 					</div>
@@ -51,25 +51,23 @@ function NavBar(props) {
                         display: none;
                     }
                     .showMenuNav {
-                        display: block;
                         position: fixed;
-                        width: 100%;
-                        height: 100vh;
-                        top: 0;
-                        left: 0;
-                        background: #000c1a;
+                        width: 75px;
+                        height: 90%;
+                        top: 40px;
+                        left: 2.5%;
+                        background: #1b0d2abf;
                         z-index: 15;
-                        overflow-y: scroll;
+                        border-radius: 15px;
+                    }
+                    .btn-stars {
+                        background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif');
+                        background-position: center;
+                        background-size: auto;
                     }
                     .showMenuNav article a:hover {
                         -webkit-text-stroke: 2px #fefefe;
                         color: transparent;
-                    }
-                    .button-plus-active {
-                        animation-name: resplandorAnimation;
-                        transform: rotate(45deg);
-                        animation-duration:  1s;
-                        animation-iteration-count: infinite;
                     }
 
                     .button-plus:hover {

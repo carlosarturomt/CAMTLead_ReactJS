@@ -15,7 +15,7 @@ function Header() {
                         background: #170325;
                     }
                     .bg-stars {
-                        margin-top: -125px;
+                        margin-top: -40px;
 
                             background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif');
                             background-position: center;

@@ -3,44 +3,38 @@ import { NavLink } from "react-router-dom";
 
 function NavOpen(props) {
 	return (
-		<div className="grid md:grid-cols-3 gap-2 lg:px-40">
-			<article className="col-span-2">
-				<ul className="flex flex-col justify-between font-semibold px-8 text-gray-100">
-					<h5 className="uppercase text-1xl border-b">Navigation</h5>
-					<NavLink
-						to="/about"
-						className="my-1 text-4xl lg:my-5 md:text-7xl xl:text-9xl"
-					>
-						About Us
-					</NavLink>
-					<NavLink
-						to="/our-team"
-						className="my-1 text-4xl lg:my-5 md:text-7xl xl:text-9xl"
-					>
-						Our Team
-					</NavLink>
-					<NavLink
-						to="/services"
-						className="my-1 text-4xl lg:my-5 md:text-7xl xl:text-9xl"
-					>
-						Services
-					</NavLink>
-				</ul>
-			</article>
-
+		<div className="px-2">
 			<aside>
-				<ul className="flex flex-col justify-between px-8 text-gray-100 mb-8">
-					<h5 className="uppercase text-1xl border-b font-semibold">Careers</h5>
-					{props.children}
+				<ul className="flex flex-col justify-between text-gray-100 mb-8">
+					<img
+						src="../../../public/logoCAMTLed.svg"
+						alt="logo CAMT Lead"
+						className="py-4"
+					/>
+
+					<span className="flex justify-center items-center text-3xl material-symbols-outlined">
+						search
+					</span>
+					<h5 className="uppercase text-center w-full font-semibold py-4">
+						MENÚ
+					</h5>
+
 					<NavLink
-						to="/careers"
+						to="/contact"
 						className="text-2xl lg:my-1 lg:text-3xl btn-animate w-fit"
 					>
+						Contact
+					</NavLink>
+				</ul>
+				<ul className="flex flex-col justify-between text-gray-100 mb-8">
+					<h5 className="uppercase text-center w-full font-semibold">MENÚ</h5>
+					{props.children}
+					<NavLink to="/careers" className="text-2xl lg:my-1 btn-animate w-fit">
 						Apply
 					</NavLink>
 				</ul>
 
-				<aside className="px-8 text-gray-100 mb-8">
+				{/* <aside className="px-8 text-gray-100 mb-8">
 					<h5 className="uppercase text-1xl border-b font-semibold">
 						Social Media
 					</h5>
@@ -78,9 +72,9 @@ function NavOpen(props) {
 							</a>
 						</li>
 					</ul>
-				</aside>
+				</aside> */}
 
-				<ul className="flex flex-col justify-between px-8 text-gray-100 mb-16">
+				<ul className="flex flex-col justify-between text-gray-100 mb-16">
 					<h5 className="uppercase text-1xl border-b font-semibold">
 						Contact Us
 					</h5>
