@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function NavOpen(props) {
+	const [isNavOpen, setIsNavOpen] = useState(false);
+
 	return (
 		<div className="px-2">
-			<aside>
+			<aside
+				onMouseEnter={() => setIsNavOpen((prev) => !prev)}
+				onMouseLeave={() => setIsNavOpen(false)}
+			>
 				<ul className="flex flex-col justify-between text-gray-100 mb-8">
 					<img
 						src="./public/logoCAMTLed.svg"
@@ -43,50 +48,125 @@ function NavOpen(props) {
 						loyalty
 					</NavLink>
 				</ul>
-				<ul className="flex flex-col justify-between text-gray-100 mb-8">
+				<ul className="flex flex-col justify-between text-gray-100 mb-8 ">
 					{props.children}
 				</ul>
 
-				{/* <aside className="px-8 text-gray-100 mb-8">
-					<h5 className="uppercase text-1xl border-b font-semibold">
-						Social Media
-					</h5>
-					<ul className="text-gray-100 pr-6">
-						<li className="text-2xl lg:my-1 lg:text-3xl ">
-							<a
-								href="https://www.facebook.com/BTCamericas"
-								className="pr-10 btn-animate"
+				<section className={isNavOpen ? "showMenu" : "hideMenuNav"}>
+					<div className="h-full">
+						<header className="flex items-center justify-between px-2 bg-transparent">
+							<section className="flex justify-between items-center rounded-full w-[60px] h-[60px] bg-transparent">
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
+							</section>
+						</header>
+						<div className="mx-2">
+							<div className="flex items-center">
+								<img
+									src="./public/logoCAMTLed.svg"
+									alt="logo CAMT Lead"
+									className="py-4 w-[60px]"
+								/>
+								<h1 className="text-lg text-[#e7d1ff]">CAMTLead</h1>
+							</div>
+						</div>
+						<div className="mx-3">
+							<div className=" flex  rounded-lg bg-[#1b0d2abf] items-center p-2">
+								<span className="material-symbols-outlined text-[#e7d1ff]">
+									search
+								</span>
+								<input
+									placeholder="Search... &#8617;"
+									className="bg-transparent w-full focus:outline-none border-none text-[#e7d1ff]"
+									type="search"
+								/>
+							</div>
+							{/* <span className="flex items-center text-3xl text-[#e7d1ff] material-symbols-outlined">
+								search <input type="search" />
+							</span> */}
+							<h5 className="uppercase w-full font-semibold py-3 text-[#e7d1ff] ">
+								MENÚ
+							</h5>
+						</div>
+
+						<ul className="flex flex-col justify-between text-gray-100 mb-8 mx-5">
+							<NavLink
+								to="/"
+								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
-								<span>Facebook</span>
-							</a>
-						</li>
-						<li className="text-2xl lg:my-1 lg:text-3xl ">
-							<a
-								href="https://www.instagram.com/btcamericas/"
-								className="pr-10 btn-animate"
+								home <span className="text-xl pl-1">Home</span>
+							</NavLink>
+							<NavLink
+								to="/explore"
+								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
-								<span>Instagram</span>
-							</a>
-						</li>
-						<li className="text-2xl lg:my-1 lg:text-3xl ">
-							<a
-								href="https://twitter.com/BTCamericas"
-								className="pr-10 btn-animate"
+								explore <span className="text-xl pl-1">About</span>
+							</NavLink>
+							<NavLink
+								to="/news"
+								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
-								<span>Twitter</span>
-							</a>
-						</li>
-						<li className="text-2xl lg:my-1 lg:text-3xl ">
-							<a
-								href="https://www.linkedin.com/company/btcamericas"
-								className="pr-10 btn-animate"
+								news <span className="text-xl pl-1">News</span>
+							</NavLink>
+							<NavLink
+								to="/loyalty"
+								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
-								<span>LinkedIn</span>
-							</a>
-						</li>
-					</ul>
-				</aside> */}
+								loyalty <span className="text-xl pl-1">Promote </span>
+							</NavLink>
+						</ul>
+						<ul className="flex flex-col justify-between text-gray-100 mb-8 mx-2">
+							{props.children}
+						</ul>
+					</div>
+				</section>
 			</aside>
+			<style>
+				{`
+                    nav {
+                        width: 99.4px;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                    .hideMenuNav {
+                        display: none;
+                    }
+                    .showMenu {
+                        position: fixed;
+                        width: 180px;
+                        height: 90%;
+                        top: 40px;
+                        left: 2.5%;
+                        z-index: 15;
+                        border-radius: 15px;
+                    }
+                    .btn-stars {
+                        background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif');
+                        background-position: center;
+                        background-size: auto;
+                    }
+                    .showMenu article a:hover {
+                        -webkit-text-stroke: 2px #fefefe;
+                        color: transparent;
+                    }
+
+                    .button-plus:hover {
+                        animation-name: resplandorAnimation, rotation;
+                        animation-duration:  1s, 0.5s;
+                        animation-iteration-count: infinite, 1;
+                    }
+                    @keyframes rotation {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+
+                `}
+			</style>
 		</div>
 	);
 }

@@ -4,9 +4,7 @@ function Header() {
 	return (
 		<>
 			<header className="bg-stars">
-				<aside className="radial-ellipse-far">
-					<h1>HELLO :D</h1>
-				</aside>
+				<aside className="radial-ellipse-far">{/* <h1>HELLO :D</h1> */}</aside>
 			</header>
 
 			<style>
