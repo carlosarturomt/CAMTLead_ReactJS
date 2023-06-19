@@ -3,7 +3,7 @@ import { NavBarLogged } from "../components/NavBar/NavBarLogged";
 
 function TemplateLogged(props) {
 	return (
-		<div>
+		<div className="bg-[#820effec] h-[100vh]">
 			<NavBarLogged />
 			{props.children}
 		</div>

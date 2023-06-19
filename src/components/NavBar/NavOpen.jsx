@@ -1,8 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { BtnLogOut } from "../Buttons/BtnLogOut";
+import { onAuthStateChanged, getAuth } from "firebase/auth";
 
 function NavOpen(props) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
+	const [test, setTest] = useState(false);
+	const auth = getAuth();
+
+	useEffect(() => {
+		onAuthStateChanged(auth, (user) => {
+			if (user.email) {
+				setTest(true);
+			} else {
+				setTest(false);
+			}
+		});
+	});
 
 	return (
 		<div className="px-2">
@@ -62,17 +76,17 @@ function NavOpen(props) {
 							</section>
 						</header>
 						<div className="mx-2">
-							<div className="flex items-center">
+							<NavLink to="/" className="flex items-center hover:animate-pulse">
 								<img
 									src="./public/logoCAMTLed.svg"
 									alt="logo CAMT Lead"
 									className="py-4 w-[60px]"
 								/>
 								<h1 className="text-lg text-[#e7d1ff]">CAMTLead</h1>
-							</div>
+							</NavLink>
 						</div>
 						<div className="mx-3">
-							<div className=" flex  rounded-lg bg-[#1b0d2abf] items-center p-2">
+							<div className=" flex  rounded-lg bg-[#820eff25] items-center p-2  hover:animate-pulse">
 								<span className="material-symbols-outlined text-[#e7d1ff]">
 									search
 								</span>
@@ -82,9 +96,6 @@ function NavOpen(props) {
 									type="search"
 								/>
 							</div>
-							{/* <span className="flex items-center text-3xl text-[#e7d1ff] material-symbols-outlined">
-								search <input type="search" />
-							</span> */}
 							<h5 className="uppercase w-full font-semibold py-3 text-[#e7d1ff] ">
 								MENÚ
 							</h5>
@@ -116,8 +127,32 @@ function NavOpen(props) {
 								loyalty <span className="text-xl pl-1">Promote </span>
 							</NavLink>
 						</ul>
-						<ul className="flex flex-col justify-between text-gray-100 mb-8 mx-2">
-							{props.children}
+						<ul className="flex flex-col justify-between text-gray-100 mb-8 mx-5 border-t-2 border-[#e7d1ff]">
+							{test ? (
+								<>
+									<NavLink
+										to="/"
+										className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
+									>
+										account_circle <span className="text-xl pl-1">Account</span>
+									</NavLink>
+
+									<BtnLogOut />
+								</>
+							) : (
+								<NavLink
+									to="/login"
+									className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
+								>
+									Login
+									<span
+										id="log"
+										className="my-3 text-xl pl-1 text-[#e7d1ff] z-20"
+									>
+										Login
+									</span>
+								</NavLink>
+							)}
 						</ul>
 					</div>
 				</section>
@@ -140,6 +175,7 @@ function NavOpen(props) {
                         left: 2.5%;
                         z-index: 15;
                         border-radius: 15px;
+						background-color: #1b0d2a;
                     }
                     .btn-stars {
                         background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif');

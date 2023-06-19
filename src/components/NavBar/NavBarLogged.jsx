@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 import { NavBar } from "./NavBar";
-import { BtnLogOut } from "../Buttons/BtnLogOut";
-import { BtnLogIn } from "../Buttons/BtnLogIn";
 import { NavLink } from "react-router-dom";
 
 function NavBarLogged() {
@@ -24,19 +22,35 @@ function NavBarLogged() {
 			{test ? (
 				<NavBar>
 					{
-						<>
+						<div className="border-t-2 border-[#e7d1ff]">
 							<NavLink
-								to="/logged"
-								className="flex items-center text-2xl lg:my-1 lg:text-3xl btn-animate w-fit"
+								to="/"
+								className="flex justify-center items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
-								Account
+								account_circle
 							</NavLink>
-							<BtnLogOut />
-						</>
+							<NavLink
+								to="/"
+								className="flex justify-center items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
+							>
+								Logout
+							</NavLink>
+						</div>
 					}
 				</NavBar>
 			) : (
-				<NavBar>{<BtnLogIn />}</NavBar>
+				<NavBar>
+					{
+						<div className="border-t-2 border-[#e7d1ff]">
+							<NavLink
+								to="/login"
+								className="flex justify-center items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse"
+							>
+								Login
+							</NavLink>
+						</div>
+					}
+				</NavBar>
 			)}
 		</>
 	);
