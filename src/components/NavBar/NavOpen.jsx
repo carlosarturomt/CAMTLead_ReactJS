@@ -26,7 +26,7 @@ function NavOpen(props) {
 			>
 				<ul className="flex flex-col justify-between text-gray-100 mb-8">
 					<img
-						src="./public/logoCAMTLed.svg"
+						src="./dist/logoCAMTLed.svg"
 						alt="logo CAMT Lead"
 						className="py-4"
 					/>
@@ -78,7 +78,7 @@ function NavOpen(props) {
 						<div className="mx-2">
 							<NavLink to="/" className="flex items-center hover:animate-pulse">
 								<img
-									src="./public/logoCAMTLed.svg"
+									src="./dist/logoCAMTLed.svg"
 									alt="logo CAMT Lead"
 									className="py-4 w-[60px]"
 								/>
