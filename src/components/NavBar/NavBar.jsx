@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-// import { Logo } from "./Logo";
 import { NavOpen } from "./NavOpen";
-// import btcLogo from "../../assets/react.svg";
 
 function NavBar(props) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 
 	return (
 		<div className="pt-[40px] w-[full]">
-			{/* <Logo image={btcLogo} /> */}
 			<nav className="ml-[2.5%] px-2 flex justify-start">
 				<section
 					className="fixed bg-transparent flex justify-between items-center rounded-full w-[60px] h-[60px] button-plus"
@@ -25,13 +22,12 @@ function NavBar(props) {
 							className="flex items-center justify-between px-2 bg-transparent"
 							onClick={() => setIsNavOpen(false)}
 						>
-							{/* <Logo image={btcLogo} classLogo="text-gray-100" logo="btc" /> */}
 							<section
-								className="flex justify-between items-center rounded-full w-[60px] h-[60px] bg-transparent button-plus "
+								className="flex justify-between items-center rounded-full w-[60px] h-[60px] bg-transparent"
 								onClick={() => setIsNavOpen((prev) => !prev)}
 							>
 								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
-								<span className="h-3 w-3 rounded-full animate-pulse bg-[#8844d4]"></span>
+								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
 								<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
 							</section>
 						</header>

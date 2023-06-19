@@ -32,7 +32,7 @@ function Header() {
                     }
                     .radial-ellipse-far {
                         height: 100vh;
-                        background: radial-gradient(ellipse farthest-corner at 50% 150%,#e7d1ff, #8844d4, #000000f5 100%);
+                        background: radial-gradient(ellipse farthest-corner at 50% 150%,#e7d1ff, #8844d4, #000000e8 100%);
                     }
                 `}
 			</style>
