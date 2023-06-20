@@ -6,6 +6,9 @@ import "./styles/App.css";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Error404 } from "./views/Error";
 import { Login } from "./views/Log/Login";
+import { Profile } from "./views/Account/Profile";
+// import { Create } from "./views/Account/Create";
+import { CreateFirestore } from "./views/Account/CreateFirestore";
 
 function App() {
 	const [show, setShow] = useState(false);
@@ -26,14 +29,10 @@ function App() {
 
 					<Route path="/login" element={<Login />} />
 
-					<Route
-						path="*"
-						element={
-							<TemplateLogged>
-								<Error404 />
-							</TemplateLogged>
-						}
-					/>
+					<Route path="/account" element={<Profile />} />
+					<Route path="/account/articles" element={<CreateFirestore />} />
+
+					<Route path="*" element={<Error404 />} />
 				</Routes>
 			</HashRouter>
 		</>

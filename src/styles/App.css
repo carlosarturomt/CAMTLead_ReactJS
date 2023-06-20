@@ -74,3 +74,9 @@ body {
 		color: #ffffff;
 	}
 }
+
+@media (max-width: 1080px) {
+	body {
+		width: 100%;
+	}
+}

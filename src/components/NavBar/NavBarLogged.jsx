@@ -24,7 +24,7 @@ function NavBarLogged() {
 					{
 						<div className="border-t-2 border-[#e7d1ff]">
 							<NavLink
-								to="/"
+								to="/account"
 								className="flex justify-center items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
 								account_circle

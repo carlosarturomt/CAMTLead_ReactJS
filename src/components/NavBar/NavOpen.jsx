@@ -19,17 +19,14 @@ function NavOpen(props) {
 	});
 
 	return (
-		<div className="px-2">
-			<aside
-				onMouseEnter={() => setIsNavOpen((prev) => !prev)}
-				onMouseLeave={() => setIsNavOpen(false)}
-			>
-				<ul className="flex flex-col justify-between text-gray-100 mb-8">
-					<img
-						src="./dist/logoCAMTLed.svg"
-						alt="logo CAMT Lead"
-						className="py-4"
-					/>
+		<div
+			className="px-2"
+			onMouseEnter={() => setIsNavOpen((prev) => !prev)}
+			onMouseLeave={() => setIsNavOpen(false)}
+		>
+			<aside>
+				<ul className="flex flex-col justify-between text-gray-100 mb-4">
+					<img src="/logoCAMTLed.svg" alt="logo CAMT Lead" className="py-4" />
 
 					<span className="flex justify-center items-center text-3xl text-[#e7d1ff] material-symbols-outlined">
 						search
@@ -44,16 +41,28 @@ function NavOpen(props) {
 						home
 					</NavLink>
 					<NavLink
-						to="/explore"
+						to="/about"
 						className="flex justify-center items-center text-3xl py-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse"
 					>
 						explore
+					</NavLink>
+					<NavLink
+						to="/discover"
+						className="flex justify-center items-center text-3xl py-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse"
+					>
+						signpost
 					</NavLink>
 					<NavLink
 						to="/news"
 						className="flex justify-center items-center text-3xl py-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse"
 					>
 						news
+					</NavLink>
+					<NavLink
+						to="/academic"
+						className="flex justify-center items-center text-3xl py-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse"
+					>
+						history_edu
 					</NavLink>
 					<NavLink
 						to="/loyalty"
@@ -78,7 +87,7 @@ function NavOpen(props) {
 						<div className="mx-2">
 							<NavLink to="/" className="flex items-center hover:animate-pulse">
 								<img
-									src="./dist/logoCAMTLed.svg"
+									src="/logoCAMTLed.svg"
 									alt="logo CAMT Lead"
 									className="py-4 w-[60px]"
 								/>
@@ -101,7 +110,7 @@ function NavOpen(props) {
 							</h5>
 						</div>
 
-						<ul className="flex flex-col justify-between text-gray-100 mb-8 mx-5">
+						<ul className="flex flex-col justify-between text-gray-100 mb-4 mx-5">
 							<NavLink
 								to="/"
 								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
@@ -109,10 +118,16 @@ function NavOpen(props) {
 								home <span className="text-xl pl-1">Home</span>
 							</NavLink>
 							<NavLink
-								to="/explore"
+								to="/about"
 								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
 								explore <span className="text-xl pl-1">About</span>
+							</NavLink>
+							<NavLink
+								to="/discover"
+								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
+							>
+								signpost <span className="text-xl pl-1">Discover</span>
 							</NavLink>
 							<NavLink
 								to="/news"
@@ -121,17 +136,23 @@ function NavOpen(props) {
 								news <span className="text-xl pl-1">News</span>
 							</NavLink>
 							<NavLink
+								to="/academic"
+								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
+							>
+								history_edu <span className="text-xl pl-1">Articles</span>
+							</NavLink>
+							<NavLink
 								to="/loyalty"
 								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
 								loyalty <span className="text-xl pl-1">Promote </span>
 							</NavLink>
 						</ul>
-						<ul className="flex flex-col justify-between text-gray-100 mb-8 mx-5 border-t-2 border-[#e7d1ff]">
+						<ul className="flex flex-col justify-between text-gray-100 mb-4 mx-5 border-t-2 border-[#e7d1ff]">
 							{test ? (
 								<>
 									<NavLink
-										to="/"
+										to="/account"
 										className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 									>
 										account_circle <span className="text-xl pl-1">Account</span>
