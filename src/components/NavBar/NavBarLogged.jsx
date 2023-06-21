@@ -4,22 +4,24 @@ import { NavBar } from "./NavBar";
 import { NavLink } from "react-router-dom";
 
 function NavBarLogged() {
-	const [test, setTest] = useState(false);
+	const [log, setLog] = useState(false);
 	const auth = getAuth();
 
 	useEffect(() => {
 		onAuthStateChanged(auth, (user) => {
-			if (user.email) {
-				setTest(true);
+			if (user == null) {
+				console.log("User is Null :(");
+			} else if (user.email) {
+				setLog(true);
 			} else {
-				setTest(false);
+				setLog(false);
 			}
 		});
 	});
 
 	return (
 		<>
-			{test ? (
+			{log ? (
 				<NavBar>
 					{
 						<div className="border-t-2 border-[#e7d1ff]">

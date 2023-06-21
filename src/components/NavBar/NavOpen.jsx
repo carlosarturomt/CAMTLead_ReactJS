@@ -5,15 +5,17 @@ import { onAuthStateChanged, getAuth } from "firebase/auth";
 
 function NavOpen(props) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
-	const [test, setTest] = useState(false);
+	const [log, setLog] = useState(false);
 	const auth = getAuth();
 
 	useEffect(() => {
 		onAuthStateChanged(auth, (user) => {
-			if (user.email) {
-				setTest(true);
+			if (user == null) {
+				console.log("User is Null x2 😢");
+			} else if (user.email) {
+				setLog(true);
 			} else {
-				setTest(false);
+				setLog(false);
 			}
 		});
 	});
@@ -149,7 +151,7 @@ function NavOpen(props) {
 							</NavLink>
 						</ul>
 						<ul className="flex flex-col justify-between text-gray-100 mb-4 mx-5 border-t-2 border-[#e7d1ff]">
-							{test ? (
+							{log ? (
 								<>
 									<NavLink
 										to="/account"
