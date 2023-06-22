@@ -9,9 +9,12 @@ import { Login } from "./views/Log/Login";
 import { Profile } from "./views/Account/Profile";
 // import { Create } from "./views/Account/Create";
 import { CreateFirestore } from "./views/Account/CreateFirestore";
+import { HelmetProvider } from "react-helmet-async";
+import { SEO } from "./components/SEO";
 
 function App() {
 	const [show, setShow] = useState(false);
+	const helmetContext = {};
 	return (
 		<>
 			<HashRouter>
@@ -20,6 +23,14 @@ function App() {
 						path="/"
 						element={
 							<TemplateLogged>
+								<HelmetProvider>
+									<SEO
+										title="CAMTLead | Home"
+										description="¡This is the Version Number Two of the Page 'Profesionistas de Texcoco'!"
+										name="Carlos Arturo Miranda Trujano"
+										type="article"
+									/>
+								</HelmetProvider>
 								<Header />
 								<button onClick={() => setShow(!show)}>Show/Hide</button>
 								{show && <ResizeApp />}

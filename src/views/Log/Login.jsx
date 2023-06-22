@@ -7,6 +7,8 @@ import {
 } from "firebase/auth";
 import { useNavigate, NavLink } from "react-router-dom";
 import { TemplateLogged } from "../../templates/TemplateLogged";
+import { HelmetProvider } from "react-helmet-async";
+import { SEO } from "../../components/SEO";
 
 function Login() {
 	const auth = getAuth();
@@ -103,6 +105,14 @@ function Login() {
 
 	return (
 		<TemplateLogged>
+			<HelmetProvider>
+				<SEO
+					title="CAMTLead | Log In"
+					description="You can Login in this Page!"
+					name="Carlos Arturo Miranda Trujano"
+					type="article"
+				/>
+			</HelmetProvider>
 			<section className="flex w-full content-center items-center justify-center py-20 md:py-5 h-screen">
 				<aside className="px-8 py-4 flex content-center items-center justify-center rounded-3xl bg-[#ffffff29] md:px-28 md:py-12">
 					<div className="max-w-72">
