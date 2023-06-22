@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavOpen } from "./NavOpen";
+import "./NavBar.css";
 
 function NavBar(props) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -35,53 +36,6 @@ function NavBar(props) {
 					</div>
 				</section>
 			</nav>
-
-			<style>
-				{`
-                    nav {
-                        width: 99.4px;
-                        display: flex;
-                        justify-content: flex-end;
-                    }
-                    .hideMenuNav {
-                        display: none;
-                    }
-                    .showMenuNav {
-                        position: fixed;
-                        width: 75px;
-                        height: 90%;
-                        top: 40px;
-                        left: 2.5%;
-                        background: #1b0d2abf;
-                        z-index: 15;
-                        border-radius: 15px;
-                    }
-                    .btn-stars {
-                        background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif');
-                        background-position: center;
-                        background-size: auto;
-                    }
-                    .showMenuNav article a:hover {
-                        -webkit-text-stroke: 2px #fefefe;
-                        color: transparent;
-                    }
-
-                    .button-plus:hover {
-                        animation-name: resplandorAnimation, rotation;
-                        animation-duration:  1s, 0.5s;
-                        animation-iteration-count: infinite, 1;
-                    }
-                    @keyframes rotation {
-                        from {
-                            transform: rotate(0deg);
-                        }
-                        to {
-                            transform: rotate(360deg);
-                        }
-                    }
-
-                `}
-			</style>
 		</div>
 	);
 }

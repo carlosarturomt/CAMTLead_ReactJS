@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ResizeApp } from "./test/ResizeApp";
 import { Header } from "./views/Home/Header";
 import { TemplateLogged } from "./templates/TemplateLogged";
 import "./styles/App.css";

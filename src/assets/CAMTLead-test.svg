@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1_copia_18" data-name="Capa 1 copia 18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530.26 259.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5c4797;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="420.62 46.48 425.76 46.48 425.82 40.57 404.85 0 399.37 .07"/>
+  <polygon class="cls-1" points="404.85 .09 399.37 .07 379.34 40.88 379.34 46.51 385.04 46.44 404.85 .09"/>
+  <rect class="cls-1" x="436.89" y=".05" width="5.54" height="46.41"/>
+  <rect class="cls-1" x="451.96" y=".05" width="5.54" height="46.41"/>
+  <rect class="cls-1" x="466.9" y=".05" width="5.54" height="46.41"/>
+  <rect class="cls-1" x="451.8" y=".05" width="5.54" height="46.41" transform="translate(430.35 477.77) rotate(-89.88)"/>
+  <rect class="cls-1" x="503.89" y=".09" width="5.54" height="46.41"/>
+  <rect class="cls-1" x="503.72" y=".09" width="5.54" height="46.41" transform="translate(482.13 529.73) rotate(-89.88)"/>
+  <rect class="cls-1" x="399.78" y="52.21" width="5.54" height="46.41" transform="translate(326.29 477.8) rotate(-89.88)"/>
+  <rect class="cls-1" x="399.84" y="66.96" width="5.54" height="46.41" transform="translate(311.6 492.58) rotate(-89.88)"/>
+  <rect class="cls-1" x="399.78" y="37.46" width="5.54" height="46.41" transform="translate(341.04 463.08) rotate(-89.88)"/>
+  <polyline class="cls-1" points="472.77 98.63 477.91 98.63 477.97 92.72 457 52.16 451.52 52.23"/>
+  <polygon class="cls-1" points="457 52.25 451.52 52.23 431.49 93.04 431.49 98.66 437.19 98.6 457 52.25"/>
+  <polyline class="cls-1" points="483.56 92.96 483.5 98.58 489.13 98.64 530.26 78.21 530.26 72.73 483.65 92.97"/>
+  <polygon class="cls-1" points="530.16 78.21 530.16 72.66 489.44 52.16 483.9 52.15 483.89 57.71 530.16 78.21"/>
+  <polyline class="cls-1" points="373.48 12.06 373.61 .13 361.67 0 274.4 43.35 274.4 54.98 373.3 12.02"/>
+  <polygon class="cls-1" points="274.6 43.35 274.6 55.13 361.02 98.62 372.77 98.65 372.79 86.86 274.6 43.35"/>
+</svg>

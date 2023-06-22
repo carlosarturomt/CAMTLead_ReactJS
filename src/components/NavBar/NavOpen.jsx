@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BtnLogOut } from "../Buttons/BtnLogOut";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
@@ -27,10 +27,12 @@ function NavOpen(props) {
 			onMouseLeave={() => setIsNavOpen(false)}
 		>
 			<aside>
-				<ul className="flex flex-col justify-between text-gray-100 mb-4">
-					<img src="/logoCAMTLed.svg" alt="logo CAMT Lead" className="py-4" />
+				<ul className="flex flex-col justify-center text-gray-100 mb-4">
+					<div className="flex justify-center items-center p-3 bg-[#8b1fff] rounded-full w-full h-full">
+						<img src="./src/assets/CAMTLead-txt.svg" alt="logo CAMT Lead" />
+					</div>
 
-					<span className="flex justify-center items-center text-3xl text-[#e7d1ff] material-symbols-outlined">
+					<span className="flex justify-center items-center text-3xl text-[#e7d1ff] material-symbols-outlined mt-3">
 						search
 					</span>
 					<h5 className="uppercase text-center w-full font-semibold py-3 text-[#e7d1ff] ">
@@ -88,16 +90,17 @@ function NavOpen(props) {
 						</header>
 						<div className="mx-2">
 							<NavLink to="/" className="flex items-center hover:animate-pulse">
-								<img
-									src="/logoCAMTLed.svg"
-									alt="logo CAMT Lead"
-									className="py-4 w-[60px]"
-								/>
-								<h1 className="text-lg text-[#e7d1ff]">CAMTLead</h1>
+								<div className="flex justify-center items-center p-3 bg-[#8b1fff] rounded-full w-[55px] h-[55px]">
+									<img
+										src="./src/assets/CAMTLead-txt.svg"
+										alt="logo CAMT Lead"
+									/>
+								</div>
+								<h1 className="ml-2 text-lg text-[#e7d1ff]">CAMTLead</h1>
 							</NavLink>
 						</div>
-						<div className="mx-3">
-							<div className=" flex  rounded-lg bg-[#820eff25] items-center p-2  hover:animate-pulse">
+						<div className="mx-3 mt-3">
+							<div className="flex  rounded-lg bg-[#820eff25] items-center p-2  hover:animate-pulse">
 								<span className="material-symbols-outlined text-[#e7d1ff]">
 									search
 								</span>
@@ -198,7 +201,7 @@ function NavOpen(props) {
                         left: 2.5%;
                         z-index: 15;
                         border-radius: 15px;
-						background-color: #1b0d2a;
+						background-color: #16052a;
                     }
                     .btn-stars {
                         background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif');
