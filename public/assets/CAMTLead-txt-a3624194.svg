@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1_copia_17" data-name="Capa 1 copia 17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.73 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="117.03 18.57 117.2 5.75 102.47 5.42 .73 56.31 .73 69.97"/>
+  <polygon class="cls-1" points=".96 56.31 .73 69.97 101.71 121.19 115.73 121.38 115.76 107.19 .96 56.31"/>
+  <rect class="cls-1" x="153.51" y="5.2" width="13.79" height="115.6"/>
+  <rect class="cls-1" x="191.05" y="5.2" width="13.79" height="115.6"/>
+  <rect class="cls-1" x="227.91" y="5.2" width="13.79" height="115.6"/>
+  <rect class="cls-1" x="190.63" y="5.2" width="13.79" height="115.6" transform="translate(134.11 260.4) rotate(-89.88)"/>
+  <rect class="cls-1" x="51.66" y="135.13" width="13.79" height="115.6" transform="translate(-134.5 251.08) rotate(-89.88)"/>
+  <rect class="cls-1" x="51.81" y="171.88" width="13.79" height="115.6" transform="translate(-171.1 287.9) rotate(-89.88)"/>
+  <rect class="cls-1" x="51.66" y="98.38" width="13.79" height="115.6" transform="translate(-97.75 214.41) rotate(-89.88)"/>
+  <polyline class="cls-1" points="139.09 236.64 138.94 250.65 152.96 250.8 255.4 199.91 255.4 186.25 139.3 236.68"/>
+  <polygon class="cls-1" points="255.16 199.91 255.16 186.08 153.72 135.02 139.93 135 139.9 148.83 255.16 199.91"/>
+</svg>

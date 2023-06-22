@@ -14,7 +14,7 @@ function Profile() {
 					type="article"
 				/>
 			</HelmetProvider>
-			<section className="bg-transparent flex items-start flex-wrap justify-center w-full max-w-7xl mx-[auto] px-4 md:px-8">
+			<section className="bg-transparent flex flex-col items-center px-5 mx-auto py-4 space-y-8 max-w-5xl">
 				<h1 className="text-gray-100 text-4xl font-semibold w-full">
 					Welcome Charly
 				</h1>

@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { Header } from "./views/Home/Header";
 import { TemplateLogged } from "./templates/TemplateLogged";
-import "./styles/App.css";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Error404 } from "./views/Error";
 import { Login } from "./views/Log/Login";
@@ -9,9 +7,9 @@ import { Profile } from "./views/Account/Profile";
 import { CreateFirestore } from "./views/Account/CreateFirestore";
 import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "./components/SEO";
+import "./styles/App.css";
 
 function App() {
-	const [show, setShow] = useState(false);
 	return (
 		<>
 			<HashRouter>
