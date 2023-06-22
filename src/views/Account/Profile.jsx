@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { TemplateLogged } from "../../templates/TemplateLogged";
 import { HelmetProvider } from "react-helmet-async";
@@ -15,7 +14,7 @@ function Profile() {
 					type="article"
 				/>
 			</HelmetProvider>
-			<section className="flex items-start flex-wrap justify-center w-full max-w-7xl mx-[auto] px-4 md:px-8 md:mb-36">
+			<section className="bg-transparent flex items-start flex-wrap justify-center w-full max-w-7xl mx-[auto] px-4 md:px-8">
 				<h1 className="text-gray-100 text-4xl font-semibold w-full">
 					Welcome Charly
 				</h1>

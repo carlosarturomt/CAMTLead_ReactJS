@@ -7,14 +7,12 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { Error404 } from "./views/Error";
 import { Login } from "./views/Log/Login";
 import { Profile } from "./views/Account/Profile";
-// import { Create } from "./views/Account/Create";
 import { CreateFirestore } from "./views/Account/CreateFirestore";
 import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "./components/SEO";
 
 function App() {
 	const [show, setShow] = useState(false);
-	const helmetContext = {};
 	return (
 		<>
 			<HashRouter>
@@ -32,8 +30,9 @@ function App() {
 									/>
 								</HelmetProvider>
 								<Header />
-								<button onClick={() => setShow(!show)}>Show/Hide</button>
-								{show && <ResizeApp />}
+								<h1 className="bg-[#140425] h-screen text-gray-50 text-center text-6xl">
+									Add the variable font
+								</h1>
 							</TemplateLogged>
 						}
 					/>

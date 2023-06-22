@@ -1,4 +1,3 @@
-import React from "react";
 import { TemplateLogged } from "../../templates/TemplateLogged";
 import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "../../components/SEO";
@@ -14,7 +13,7 @@ function Error404() {
 					type="article"
 				/>
 			</HelmetProvider>
-			<section className="flex flex-col items-center justify-center px-5 mx-auto my-28 py-1 space-y-8 text-center sm:max-w-md">
+			<section className="bg-transparent flex flex-col items-center justify-center px-5 mx-auto py-1 space-y-8 text-center sm:max-w-md">
 				<h2 className="mb-8 font-extrabold text-9xl text-gray-300 animate-pulse">
 					<span className="sr-only">Error</span>404
 				</h2>
