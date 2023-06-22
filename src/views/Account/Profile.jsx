@@ -39,6 +39,13 @@ function Profile() {
 					</aside>
 				</article>
 			</section>
+			<style>
+				{`
+				section {
+					position: initial;
+				}
+				`}
+			</style>
 		</TemplateLogged>
 	);
 }

@@ -7,7 +7,7 @@ function Header() {
 				<aside className="gradient3">
 					<div className="p-3 h-screen flex items-center flex-col">
 						<img
-							src="./src/assets/CAMTLead-txt-full.svg"
+							src="./CAMTLead-txt-full.svg"
 							alt="logo CAMT Lead"
 							className="w-[600px]"
 						/>

@@ -29,7 +29,7 @@ function NavOpen(props) {
 			<aside>
 				<ul className="flex flex-col justify-center text-gray-100 mb-4">
 					<div className="flex justify-center items-center p-3 bg-[#8b1fff] rounded-full w-full h-full">
-						<img src="./src/assets/CAMTLead-txt.svg" alt="logo CAMT Lead" />
+						<img src="./CAMTLead-txt.svg" alt="logo CAMT Lead" />
 					</div>
 
 					<span className="flex justify-center items-center text-3xl text-[#e7d1ff] material-symbols-outlined mt-3">
@@ -91,10 +91,7 @@ function NavOpen(props) {
 						<div className="mx-2">
 							<NavLink to="/" className="flex items-center hover:animate-pulse">
 								<div className="flex justify-center items-center p-3 bg-[#8b1fff] rounded-full w-[55px] h-[55px]">
-									<img
-										src="./src/assets/CAMTLead-txt.svg"
-										alt="logo CAMT Lead"
-									/>
+									<img src="./CAMTLead-txt.svg" alt="logo CAMT Lead" />
 								</div>
 								<h1 className="ml-2 text-lg text-[#e7d1ff]">CAMTLead</h1>
 							</NavLink>
