@@ -88,7 +88,7 @@ function Header() {
 							CAMT Lead, tú Sitio de Confianza
 						</h1>
 						<h2 className="flex items-center flex-wrap justify-center animate-RtoL-nR px-6 md:px-0">
-							<span className="leading-5 text-1xl mr-1">¿en tu área</span>
+							<span className="leading-5 text-1xl mr-1">¿en tu área de</span>
 							<span className="leading-5 text-2xl font-bold">C</span>
 							<span className="leading-5 text-1xl">onfort? </span>
 							<span className="leading-5 text-2xl font-bold ml-1">A</span>
@@ -97,7 +97,7 @@ function Header() {
 							<span className="leading-5 text-1xl">
 								uestrales que puedes. Seamos
 							</span>
-							<span className="leading-5 text-5xl font-bold ml-1"> + </span>
+							<span className="leading-5 text-4xl font-bold ml-1"> + </span>
 							<span className="leading-5 text-2xl font-bold ml-1">L</span>
 							<span className="leading-5 text-1xl">íderes</span>
 						</h2>

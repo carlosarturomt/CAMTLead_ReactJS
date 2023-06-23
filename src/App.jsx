@@ -21,7 +21,7 @@ function App() {
 							<TemplateLogged>
 								<HelmetProvider>
 									<SEO
-										title="CAMTLead | Home"
+										title="CAMT Lead"
 										description="¡This is the Version Number Two of the Page 'Profesionistas de Texcoco'!"
 										name="Carlos Arturo Miranda Trujano"
 										type="article"

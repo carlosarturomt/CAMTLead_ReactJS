@@ -8,8 +8,8 @@ function Error404() {
 			<HelmetProvider>
 				<SEO
 					title="Ups!"
-					description=" We don´t find this page :("
-					name="Company name."
+					description="We don´t find this page :("
+					name="Carlos Arturo Miranda Trujano"
 					type="article"
 				/>
 			</HelmetProvider>

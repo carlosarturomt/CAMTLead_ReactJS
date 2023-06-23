@@ -37,8 +37,9 @@ function InputDate({ on }) {
 		<div className="flex justify-end items-center">
 			<label className="text-gray-300 mx-2">Date:</label>
 			<input
+				required
 				type="date"
-				name="dateVacancy"
+				name="date"
 				onChange={on}
 				className="rounded-md border-0 focus:outline-none focus:ring-1 focus:ring-gray-100 py-1 px-1.5 text-gray-100 bg-[#ffffff17]"
 			/>
@@ -63,4 +64,23 @@ function LabelForm({ label, name, on, val }) {
 		</div>
 	);
 }
-export { InputForm, InputDate, LabelForm, InputDateRatio };
+function LabelFormXL({ label, name, on, val }) {
+	return (
+		<div className="my-4">
+			<label htmlFor="" className="text-gray-300">
+				{label}
+			</label>
+			<textarea
+				required
+				value={val}
+				type="text"
+				name={name}
+				rows="10"
+				cols="50"
+				className="block w-full rounded-md border-0 focus:outline-none focus:ring-1 focus:ring-gray-100 py-1 px-1.5 text-gray-100 bg-[#ffffff17]"
+				onChange={on}
+			/>
+		</div>
+	);
+}
+export { InputForm, InputDate, LabelForm, InputDateRatio, LabelFormXL };
