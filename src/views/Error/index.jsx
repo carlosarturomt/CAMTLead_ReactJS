@@ -13,7 +13,7 @@ function Error404() {
 					type="article"
 				/>
 			</HelmetProvider>
-			<section className="bg-transparent flex flex-col items-center justify-center px-5 mx-auto py-1 space-y-8 text-center sm:max-w-md inherit">
+			<section className="bg-transparent flex flex-col items-center justify-center px-5 mx-auto py-1 space-y-8 text-center sm:max-w-md inherit h-screen">
 				<h2 className="mb-8 font-extrabold text-9xl text-gray-300 animate-pulse">
 					<span className="sr-only">Error</span>404
 				</h2>

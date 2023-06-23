@@ -9,33 +9,6 @@ header {
 	background-size: auto;
 	color: #fefefe;
 }
-section {
-	background: #25103d;
-	width: 100%;
-	height: 100vh;
-	z-index: 11 !important;
-	position: relative;
-}
-.radial-ellipse-far {
-	height: 100vh;
-	background: radial-gradient(
-		ellipse farthest-corner at 50% 150%,
-		#e7d1ff,
-		#8844d4,
-		#000000e8 100%
-	);
-}
-.gradient2 {
-	height: 100vh;
-	background-image: linear-gradient(
-		to top,
-		#8b1fff,
-		#691dc3,
-		#4b188a,
-		#2d0f55e8,
-		#000000e8
-	);
-}
 .gradient3 {
 	height: 100vh;
 	background-image: linear-gradient(
@@ -47,14 +20,220 @@ section {
 		#140425
 	);
 }
-.gradient4 {
-	height: 100vh;
-	background-image: linear-gradient(
-		to bottom,
-		#230f48,
-		#1e0e3f,
-		#1a0c36,
-		#17092d,
-		#140425
-	);
+
+/* A N I M A T I O N S */
+
+.animate-LtoR-nR {
+	animation-name: Animation-Left-to-Right-nR;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+.animate-RtoL-nR {
+	animation-name: Animation-Right-to-Left-nR;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+.animate-BtoU-nR {
+	animation-name: Animation-Bottom-to-Up-nR;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+.animate-UtoB-nR {
+	animation-name: Animation-Up-to-Bottom-nR;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+/* Same but with Rotate */
+.animate-LtoR {
+	animation-name: Animation-Left-to-Right;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+.animate-RtoL {
+	animation-name: Animation-Right-to-Left;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+.animate-BtoU {
+	animation-name: Animation-Bottom-to-Up;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+.animate-UtoB {
+	animation-name: Animation-Up-to-Bottom;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: initial;
+}
+
+@keyframes Animation-Right-to-Left-nR {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes Animation-Left-to-Right-nR {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes Animation-Left-to-Right-nR {
+	0% {
+		opacity: 0;
+		transform: translateX(-250%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes Animation-Right-to-Left-nR {
+	0% {
+		opacity: 0;
+		transform: translateX(250%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes Animation-Bottom-to-Up-nR {
+	0% {
+		opacity: 0;
+		transform: translateY(250%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes Animation-Up-to-Bottom-nR {
+	0% {
+		opacity: 0;
+		transform: translateY(-250%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Same but with R o t a t e */
+@keyframes Animation-Left-to-Right {
+	0% {
+		opacity: 0;
+		transform: translateX(-250%);
+		rotate: -90deg;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes Animation-Right-to-Left {
+	0% {
+		opacity: 0;
+		transform: translateX(250%);
+		rotate: 90deg;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+		rotate: 0deg;
+	}
+}
+@keyframes Animation-Left-to-Right {
+	0% {
+		opacity: 0;
+		transform: translateX(-250%);
+		rotate: -90deg;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+		rotate: 0deg;
+	}
+}
+@keyframes Animation-Right-to-Left {
+	0% {
+		opacity: 0;
+		transform: translateX(250%);
+		rotate: 90deg;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+		rotate: 0deg;
+	}
+}
+@keyframes Animation-Bottom-to-Up {
+	0% {
+		opacity: 0;
+		transform: translateY(250%);
+		rotate: 90deg;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		rotate: 0deg;
+	}
+}
+@keyframes Animation-Up-to-Bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(-250%);
+		rotate: -90deg;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		rotate: 0deg;
+	}
 }

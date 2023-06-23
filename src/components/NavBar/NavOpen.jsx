@@ -21,16 +21,18 @@ function NavOpen(props) {
 	});
 
 	return (
-		<div
-			className="px-2"
-			onMouseEnter={() => setIsNavOpen((prev) => !prev)}
-			onMouseLeave={() => setIsNavOpen(false)}
-		>
-			<aside>
+		<div className="px-2">
+			<aside
+				onMouseEnter={() => setIsNavOpen((prev) => !prev)}
+				onMouseLeave={() => setIsNavOpen(false)}
+			>
 				<ul className="flex flex-col justify-center text-gray-100 mb-4">
-					<div className="flex justify-center items-center p-3 bg-[#8b1fff] rounded-full w-full h-full">
+					<NavLink
+						to="/"
+						className="flex justify-center items-center p-3 bg-[#8b1fff] rounded-full w-full h-full"
+					>
 						<img src="./CAMTLead-sm.svg" alt="logo CAMT Lead" />
-					</div>
+					</NavLink>
 
 					<span className="flex justify-center items-center text-3xl text-[#e7d1ff] material-symbols-outlined mt-3">
 						search
