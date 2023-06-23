@@ -4,10 +4,11 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { Error404 } from "./views/Error";
 import { Login } from "./views/Log/Login";
 import { Profile } from "./views/Account/Profile";
-import { CreateFirestore } from "./views/Account/CreateFirestore";
 import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "./components/SEO";
 import "./styles/App.css";
+import { Logged } from "./views/Account/Logged";
+import { CreateFirestore } from "./views/Account/CreateFirestore";
 
 function App() {
 	return (
@@ -36,8 +37,22 @@ function App() {
 
 					<Route path="/login" element={<Login />} />
 
-					<Route path="/account" element={<Profile />} />
-					<Route path="/account/articles" element={<CreateFirestore />} />
+					<Route
+						path="/account"
+						element={
+							<Logged>
+								<Profile />
+							</Logged>
+						}
+					/>
+					<Route
+						path="/account/articles"
+						element={
+							<Logged>
+								<CreateFirestore />
+							</Logged>
+						}
+					/>
 
 					<Route path="*" element={<Error404 />} />
 				</Routes>
