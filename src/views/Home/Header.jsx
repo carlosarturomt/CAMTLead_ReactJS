@@ -3,8 +3,8 @@ import "./Header.css";
 function Header() {
 	return (
 		<>
-			<header className="bg-stars">
-				<aside className="gradient3">
+			<header className="mt-[-40px] text-gray-50">
+				<aside className="gradient">
 					<div className="p-3 h-screen flex items-center flex-col justify-center">
 						<div className="flex flex-wrap px-4 w-10/12 mb-2 md:px-24  md:w-8/12 lg:w-7/12">
 							<img

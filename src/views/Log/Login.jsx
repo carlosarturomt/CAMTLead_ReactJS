@@ -11,13 +11,14 @@ import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "../../components/SEO";
 
 function Login() {
+	/* ----- States ----- */
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
 	const auth = getAuth();
 	const navigate = useNavigate();
 
 	const provider = new GoogleAuthProvider();
-
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
 
 	const pathname = window.location;
 	const path = pathname.toString();

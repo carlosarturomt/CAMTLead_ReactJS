@@ -1,15 +1,4 @@
-header {
-	background: #170325;
-}
-.bg-stars {
-	margin-top: -40px;
-	background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMxMjNmMWQ0MjQ1ZmZhMGZmYWQ3NjcwNTRlNTBjODc2YjQ1M2JjMiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/0MntFC3sWkoQLbXzak/giphy.gif");
-	background-position: center;
-	height: 100vh;
-	background-size: auto;
-	color: #fefefe;
-}
-.gradient3 {
+.gradient {
 	height: 100vh;
 	background-image: linear-gradient(
 		to bottom,
@@ -27,7 +16,7 @@ header {
 	animation-name: Animation-Left-to-Right-nR;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -37,7 +26,7 @@ header {
 	animation-name: Animation-Right-to-Left-nR;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -47,7 +36,7 @@ header {
 	animation-name: Animation-Bottom-to-Up-nR;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -57,7 +46,7 @@ header {
 	animation-name: Animation-Up-to-Bottom-nR;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -67,7 +56,7 @@ header {
 	animation-name: Animation-Left-to-Right;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -77,7 +66,7 @@ header {
 	animation-name: Animation-Right-to-Left;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -87,7 +76,7 @@ header {
 	animation-name: Animation-Bottom-to-Up;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;
@@ -97,7 +86,7 @@ header {
 	animation-name: Animation-Up-to-Bottom;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
-	animation-delay: 1;
+	/* animation-delay: 1; */
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-play-state: initial;

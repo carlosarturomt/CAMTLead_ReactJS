@@ -6,10 +6,10 @@ function NavBar(props) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 
 	return (
-		<div className="pt-[40px] w-[full]">
+		<div className="pt-[40px] w-[full] ">
 			<nav className="ml-[2.5%] px-2 flex justify-start">
 				<section
-					className="fixed bg-transparent flex justify-between items-center rounded-full w-[60px] h-[60px] button-plus"
+					className="fixed z-10 bg-transparent flex justify-between items-center rounded-full w-[60px] h-[60px] button-plus"
 					onClick={() => setIsNavOpen((prev) => !prev)}
 				>
 					<span className="h-3 w-3 rounded-full animate-pulse bg-[#e7d1ff]"></span>
