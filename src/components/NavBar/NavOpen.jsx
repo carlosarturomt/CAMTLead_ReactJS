@@ -65,7 +65,7 @@ function NavOpen(props) {
 						news
 					</NavLink>
 					<NavLink
-						to="/academic"
+						to="/articles"
 						className="flex justify-center items-center text-3xl py-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse"
 					>
 						history_edu
@@ -140,7 +140,7 @@ function NavOpen(props) {
 								news <span className="text-xl pl-1">News</span>
 							</NavLink>
 							<NavLink
-								to="/academic"
+								to="/articles"
 								className="flex items-center text-3xl my-2 text-[#e7d1ff] material-symbols-outlined hover:animate-pulse btn-animate"
 							>
 								history_edu <span className="text-xl pl-1">Articles</span>

@@ -45,45 +45,6 @@ function Header() {
 								/>
 							</div>
 						</div>
-						{/* <div className="flex flex-wrap px-4 md:px-24 w-10/12 md:w-9/12 xl:w-7/12 mb-2">
-							<img
-								src="./CAMTLead-C.svg"
-								alt="Letter C"
-								className="w-[40%] animate-LtoR-nR"
-							/>
-							<div className="w-[60%] flex flex-wrap">
-								<img
-									src="./CAMTLead-A.svg"
-									alt="Letter A"
-									className="w-4/12 animate-BtoU-nR"
-								/>
-								<img
-									src="./CAMTLead-M.svg"
-									alt="Letter M"
-									className="w-4/12 animate-UtoB-nR"
-								/>
-								<img
-									src="./CAMTLead-T.svg"
-									alt="Letter T"
-									className="w-4/12 animate-RtoL-nR"
-								/>
-								<img
-									src="./CAMTLead-E.svg"
-									alt="Letter E"
-									className="w-4/12 animate-UtoB-nR"
-								/>
-								<img
-									src="./CAMTLead-A.svg"
-									alt="Letter A"
-									className="w-4/12 animate-BtoU-nR"
-								/>
-								<img
-									src="./CAMTLead-D.svg"
-									alt="Letter D"
-									className="w-4/12 animate-RtoL-nR"
-								/>
-							</div>
-						</div> */}
 						<h1 className="text-4xl text-center animate-LtoR-nR">
 							CAMT Lead, tú Sitio de Confianza
 						</h1>
