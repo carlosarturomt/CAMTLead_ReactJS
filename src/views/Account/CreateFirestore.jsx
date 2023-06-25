@@ -12,9 +12,28 @@ import { initializeApp } from "firebase/app";
 import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "../../components/SEO";
 import { Logged } from "./Logged";
+import {
+	getStorage,
+	ref as refStorage,
+	uploadBytes,
+	getDownloadURL,
+} from "firebase/storage";
 
 function CreateFirestore() {
 	const [articleData, setArticleData] = useState();
+	const [file, setFile] = useState({});
+	const storage = getStorage();
+	const storageRef = refStorage(storage, `articles/${file.name}`);
+
+	/**
+	*
+	* @param {Object} event Re write the Data in File with UseState()
+	*/
+	const fileHandler = (event) => {
+		const file = event.target.files[0];
+		setFile(file);
+		console.log(file);
+	};
 	/**
 	 *
 	 * @param {Object} event Re write the data of the Date in the Vacancy with UseState()
@@ -35,17 +54,37 @@ function CreateFirestore() {
 	};
 	/**
 	 *
+	 * @returns Call the Value of the Function fileHandler() to get the URL of the File, after that save the Data in an Object
+	 */
+	const saveCv = async () => {
+		await uploadBytes(storageRef, file);
+		const url = await getDownloadURL(storageRef);
+		return url;
+	};
+	/**
+	 *
 	 * @param {Object} event Receive an Object
 	 * @returns Write data in the Object of Firebase in Cloud Firestore DataBase
 	 */
-	const saveData = (event) => {
+	const saveData = async (event) => {
 		event.preventDefault();
-		const app = initializeApp(firebaseConfig);
-		const db = getFirestore(app);
-		addDoc(collection(db, "articles"), {
-			...articleData,
-		});
-		alert("Sent");
+		// const app = initializeApp(firebaseConfig);
+		// const db = getFirestore(app);
+		// addDoc(collection(db, "articles"), {
+		// 	...articleData,
+		// });
+		// alert("Sent");
+		if (articleData) {
+			const app = initializeApp(firebaseConfig);
+			const db = getFirestore(app);
+			addDoc(collection(db, "articles"), {
+				...articleData,
+			});
+			const result = await saveCv();
+			articleData.url = result;
+			saveData();
+		}
+		alert("Enviado");
 	};
 
 	return (
@@ -76,6 +115,20 @@ function CreateFirestore() {
 						<InputForm label="Tags" name="tags" on={changeHandler} />
 						<LabelForm label="Summary" name="summary" on={changeHandler} />
 						<LabelFormXL label="Content" name="content" on={changeHandler} />
+
+						<div className="my-4">
+							<label htmlFor="" className="text-gray-300 text-sm">
+								Adjuntar CV
+							</label>
+							<input
+								required
+								type="file"
+								name="candidateGrade"
+								className="block w-full rounded-md border-0 focus:outline-none focus:ring-1 focus:ring-gray-100 py-1 px-1.5 text-gray-100 bg-[#ffffff17]"
+								onChange={fileHandler}
+							/>
+						</div>
+
 						<button
 							className="bg-[#1f82fc70] py-1 px-4 rounded-md font-semibold text-gray-100 hover:bg-[#1f82fcae] animate-pulse hover:animate-none flex items-center"
 							type="submit"
