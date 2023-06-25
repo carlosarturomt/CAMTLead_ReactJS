@@ -54,9 +54,9 @@ function CreateFirestore() {
 	};
 	/**
 	 *
-	 * @returns Call the Value of the Function fileHandler() to get the URL of the File, after that save the Data in an Object
+	 * @returns Save the File in the Storage of Firestore in the Reference
 	 */
-	const saveCv = async () => {
+	const saveFile = async () => {
 		await uploadBytes(storageRef, file);
 		const url = await getDownloadURL(storageRef);
 		return url;
@@ -78,16 +78,16 @@ function CreateFirestore() {
 	/**
 	 *
 	 * @param {Object} event Receive an Object
-	 * @returns Write data in the Object of Firebase in Cloud Firestore DataBase
+	 * @returns Receive two Functions (saveFile(), saveData()) when receive the order in the form with Submit
 	 */
 	const alertSend = async (event) => {
 		event.preventDefault();
 		if (articleData) {
-			const result = await saveCv();
+			const result = await saveFile();
 			articleData.url = result;
 			saveData();
 		}
-		alert("Enviado");
+		alert("Sent");
 	};
 
 	return (
@@ -121,7 +121,7 @@ function CreateFirestore() {
 
 						<div className="my-4">
 							<label htmlFor="" className="text-gray-300 text-sm">
-								Adjuntar CV
+								Attach Image
 							</label>
 							<input
 								required

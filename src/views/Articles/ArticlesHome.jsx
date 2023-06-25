@@ -2,13 +2,12 @@
 import { HelmetProvider } from "react-helmet-async";
 import { TemplateLogged } from "../../templates/TemplateLogged";
 import { SEO } from "../../components/SEO";
-import { GetData } from "../Account/GetData";
-import Carrousel from "../../components/Carrousel";
+// import { GetData } from "../Account/GetData";
+import CarrouselTest from "../../components/Carrousel/indexTest";
+// import Carrousel from "../../components/Carrousel";
 
 function ArticlesHome() {
-	// useEffect(() => {
-	// 	return () => slider.mount()
-	// }, [])
+
 	return (
 		<>
 			<TemplateLogged>
@@ -20,18 +19,8 @@ function ArticlesHome() {
 						type="article"
 					/>
 				</HelmetProvider>
-				<Carrousel />
-				{/* <header className="mt-[-40px] text-gray-50">
-					<aside className="gradient">
-						<div className="p-3 h-screen flex items-center flex-col justify-center">
-							<h1 className="text-8xl font-semibold animate-LtoR">
-								🛠️ Articles
-							</h1>
-							<h2 className="text-5xl animate-RtoL">In Construction</h2>
-						</div>
-					</aside>
-				</header> */}
-				<GetData />
+				<CarrouselTest />
+				{/* <GetData /> */}
 			</TemplateLogged>
 		</>
 	);
