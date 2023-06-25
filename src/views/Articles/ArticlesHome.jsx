@@ -6,6 +6,9 @@ import { GetData } from "../Account/GetData";
 import Carrousel from "../../components/Carrousel";
 
 function ArticlesHome() {
+	// useEffect(() => {
+	// 	return () => slider.mount()
+	// }, [])
 	return (
 		<>
 			<TemplateLogged>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import Glide from "@glidejs/glide"
-import { TemplateLogged } from "../../templates/TemplateLogged";
 
 const sliderConfiguration = {
 	gap: 20,
@@ -15,8 +14,8 @@ const Carrousel = () => {
 	const slider = new Glide('.glide', sliderConfiguration);
 
 	useEffect(() => {
-		return () => slider.mount()
-	}, [slider])
+		slider.mount()
+	}, [])
 
 	return (
 		<>

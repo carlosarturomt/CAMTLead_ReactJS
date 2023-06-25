@@ -5,6 +5,7 @@ import { SEO } from "../../components/SEO";
 import { Logged } from "./Logged";
 
 function Profile() {
+
 	return (
 		<Logged>
 			<TemplateLogged>

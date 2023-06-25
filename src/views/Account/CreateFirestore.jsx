@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
 	InputDate,
 	InputForm,
@@ -61,25 +61,28 @@ function CreateFirestore() {
 		const url = await getDownloadURL(storageRef);
 		return url;
 	};
+
 	/**
 	 *
 	 * @param {Object} event Receive an Object
 	 * @returns Write data in the Object of Firebase in Cloud Firestore DataBase
 	 */
-	const saveData = async (event) => {
+	const saveData = () => {
+		const app = initializeApp(firebaseConfig);
+		const db = getFirestore(app);
+		addDoc(collection(db, "articles"), {
+			...articleData,
+		});
+	};
+
+	/**
+	 *
+	 * @param {Object} event Receive an Object
+	 * @returns Write data in the Object of Firebase in Cloud Firestore DataBase
+	 */
+	const alertSend = async (event) => {
 		event.preventDefault();
-		// const app = initializeApp(firebaseConfig);
-		// const db = getFirestore(app);
-		// addDoc(collection(db, "articles"), {
-		// 	...articleData,
-		// });
-		// alert("Sent");
 		if (articleData) {
-			const app = initializeApp(firebaseConfig);
-			const db = getFirestore(app);
-			addDoc(collection(db, "articles"), {
-				...articleData,
-			});
 			const result = await saveCv();
 			articleData.url = result;
 			saveData();
@@ -101,7 +104,7 @@ function CreateFirestore() {
 				<section className="py-8 flex justify-center flex-col items-center ml-auto mr-auto w-[95%] md:w-2/4 lg:w-3/5">
 					<form
 						className="w-full py-4 px-2 md:mr-4 md:p-6 rounded-md bg-[#022e5f21]"
-						onSubmit={saveData}
+						onSubmit={alertSend}
 					>
 						<InputDate on={changeDate} />
 						<InputForm
