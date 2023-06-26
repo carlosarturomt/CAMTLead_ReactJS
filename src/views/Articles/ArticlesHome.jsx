@@ -3,9 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { TemplateLogged } from "../../templates/TemplateLogged";
 import { SEO } from "../../components/SEO";
 import { GetData } from "../Account/GetData";
-// import CarrouselTest from "../../components/Carrousel/indexTest";
-// import Carrousel from "../../components/Carrousel";
-import GlideTest from "../../components/Carrousel/GlideTest";
+import Carrousel from "../../components/Carrousel/Glide";
 
 function ArticlesHome() {
 
@@ -20,10 +18,8 @@ function ArticlesHome() {
 						type="article"
 					/>
 				</HelmetProvider>
-				{/* <Carrousel /> */}
-				{/* <CarrouselTest /> */}
-				<GlideTest />
-				{/* <GetData /> */}
+				<Carrousel />
+				<GetData />
 			</TemplateLogged>
 		</>
 	);
