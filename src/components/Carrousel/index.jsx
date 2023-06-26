@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import Glide from "@glidejs/glide"
-// import { GetData } from "../../views/Account/GetData";
 
 const sliderConfiguration = {
 	gap: 0,
@@ -20,7 +19,6 @@ const Carrousel = () => {
 
 	return (
 		<>
-			{/* <GetData /> */}
 			<div className='glide bg-red-200 h-[400px] mt-[-40px]'>
 				<div className='glide__track bg-red-400' data-glide-el='track'>
 					<ul className='glide__slides bg-red-700 flex'>
