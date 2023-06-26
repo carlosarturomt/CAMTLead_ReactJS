@@ -7,14 +7,10 @@ import firebaseConfig from "../../config/firebase-config";
 import { initializeApp } from "firebase/app";
 import { useEffect, useState } from "react";
 import { CardArticle } from "../../components/Card/CardArticle";
-import { Link, NavLink, useParams } from "react-router-dom";
-// import CardArticle from "../../components/Card/CardArticle";
+import { Link } from "react-router-dom";
 
 function GetData() {
 	const [data, setData] = useState([]);
-	// const [key, setKey] = useState('');
-	// const { articleId } = useParams();
-
 	const app = initializeApp(firebaseConfig);
 	const db = getFirestore(app);
 	const docRef = collection(db, "articles");
@@ -26,19 +22,18 @@ function GetData() {
 	const test = async () => {
 		const arr = [];
 		const data = await getDocs(docRef);
-		data.forEach((item) => {
-			arr.push(item);
+		data.forEach((article) => {
+			arr.push(article);
 		});
 		setData(arr);
 	}
 
-
 	return (
 		<div className="flex justify-center flex-wrap text-gray-50 pb-28 mt-20">
-			{data.slice(0, 6).map((item) => {
+			{data.slice(0, 6).map((article) => {
 				return (
-					<CardArticle data={item.data()} key={item.id}>
-						<Link to={item.id}>
+					<CardArticle data={article.data()} key={article.id}>
+						<Link to={article.id}>
 							<button className="bg-[#ffffff17] text-white font-medium px-4 py-2 rounded-md flex gap-1 items-center hover:bg-[#ffffff30] hover:animate-pulse">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +54,7 @@ function GetData() {
 					</CardArticle>
 				);
 			})}
-		</div >
+		</div>
 	);
 }
 
