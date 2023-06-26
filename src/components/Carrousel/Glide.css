@@ -1,0 +1,10 @@
+.gradient-opacity {
+	background-image: linear-gradient(
+		to bottom,
+		#8b1fff,
+		#6521c5ab,
+		#431c8c76,
+		#291456b2,
+		#140425
+	);
+}

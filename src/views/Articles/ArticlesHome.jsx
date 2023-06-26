@@ -5,6 +5,7 @@ import { SEO } from "../../components/SEO";
 import { GetData } from "../Account/GetData";
 import Carrousel from "../../components/Carrousel/Glide";
 
+
 function ArticlesHome() {
 
 	return (

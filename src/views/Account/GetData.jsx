@@ -33,11 +33,11 @@ function GetData() {
 	}
 
 	return (
-		<div className="flex items-center justify-center flex-col text-gray-50 pb-28">
-			{data.map((item) => {
+		<div className="flex justify-center flex-wrap text-gray-50 pb-28 my-20">
+			{data.slice(0, 6).map((item) => {
 				return (
 					<CardArticle data={item} key={item.articleTitle}>
-						:(
+						<button>See more...</button>
 					</CardArticle>
 				);
 			})}

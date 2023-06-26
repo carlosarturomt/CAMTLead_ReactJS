@@ -5,7 +5,6 @@ import { Login } from "./views/Log/Login";
 import { ArticlesHome } from "./views/Articles/ArticlesHome";
 import { Profile } from "./views/Account/Profile";
 import { CreateFirestore } from "./views/Account/CreateFirestore";
-// import Carrousel from "./components/Carrousel";
 import "./styles/App.css";
 
 function App() {
